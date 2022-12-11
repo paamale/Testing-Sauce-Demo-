@@ -27,16 +27,6 @@ public class SauceDemoSteps {
         new LoginPage().clickLoginButton();
     }
 
-    @And("^I filter the products by Price \"([^\"]*)\"$")
-    public void iFilterTheProductsByPrice(String price)  {
-        new ProductPage().sortProductsHighToLow(price);
-    }
-
-    @And("^I select cheapest & costliest products and add to basket$")
-    public void iSelectCheapestCostliestProductsAndAddToBasket() {
-        new ProductPage().addCheapestProduct();
-    }
-
     @And("^I open shopping cart$")
     public void iOpenShoppingCart() {
         new ProductPage().clickCartButton();
